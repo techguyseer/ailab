@@ -3,108 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumi Shoes | Immersive Experience</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>Rumi Shoes | Circularity</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Critical CSS for instant first paint */
+        :root {
+            --electric-lime: #CCFF00;
+            --concrete-grey: #B2B2B2;
+            --deep-charcoal: #1A1A1A;
+            --pure-white: #FFFFFF;
+            --ink-black: #000000;
+        }
+        body { margin: 0; font-family: 'Inter', 'Helvetica', sans-serif; background: var(--pure-white); color: var(--deep-charcoal); }
+        header { 
+            position: sticky; top: 0; z-index: 1000; 
+            background: var(--pure-white); border-bottom: 4px solid var(--ink-black); 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 1rem 2rem; backdrop-filter: blur(10px);
+        }
+        .logo { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; color: var(--ink-black); }
+        .cta-btn { 
+            background: var(--electric-lime); color: var(--ink-black); 
+            border: 3px solid var(--ink-black); padding: 0.5rem 1rem; 
+            font-weight: bold; text-transform: uppercase; cursor: pointer;
+            text-decoration: none; letter-spacing: 0.1em;
+        }
+    </style>
 </head>
 <body>
 
-    <section class="hero" id="hero">
-        <div class="video-bg">
-            <img src="https://loremflickr.com/1280/720/footwear" alt="Footwear background">
+<header>
+    <div class="logo">RUMI SHOES</div>
+    <a href="#waitlist" class="cta-btn">Trade-In Now</a>
+</header>
+
+<main>
+    <section id="hero" class="reveal">
+        <div class="hero-overlay">
+            <h1>CIRCULAR<br>PROCESS</h1>
         </div>
-        <div class="overlay">
-            <h1>RUMI SHOES</h1>
-            <button class="cta" onclick="document.getElementById('checkout-modal').style.display='flex'">Shop Now</button>
+        <img src="https://picsum.photos/seed/circular/1920/1080" alt="Circular Process" class="hero-bg">
+    </section>
+
+    <section id="calculator" class="reveal">
+        <div class="calc-container">
+            <div class="calc-text">
+                <h2>CREDIT SYSTEM</h2>
+                <p>Return your worn-out Rumi footwear and receive credits toward your next pair. We believe in strength, transparency, and a closed-loop future.</p>
+            </div>
+            <div class="calc-tool">
+                <div class="condition-selector">
+                    <button data-value="50">LIKE NEW</button>
+                    <button data-value="30" class="active">GOOD</button>
+                    <button data-value="15">FAIR</button>
+                </div>
+                <div class="value-display">
+                    $<span id="credit-value">30</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="explorer" id="explorer">
-        <div class="container">
-            <div class="explorer-visual">
-                <img src="https://loremflickr.com/800/600/leather" alt="Shoe Detail" id="product-img">
-                <div class="hotspot" style="top: 30%; left: 40%" data-info="Sustainable Vegan Leather: Sourced from organic pineapple waste."></div>
-                <div class="hotspot" style="top: 60%; left: 60%" data-info="Recycled Ocean Plastic: 100% reclaimed marine plastic mesh."></div>
-                <div class="hotspot" style="top: 80%; left: 30%" data-info="Algae-Based Foam: Carbon-negative sole cushioning."></div>
-            </div>
-            <div class="explorer-info">
-                <h2>Material Explorer</h2>
-                <p id="info-text">Tap a hotspot to explore the sustainable origins of our materials.</p>
-            </div>
+    <section id="gallery" class="reveal">
+        <h2>THE CIRCULAR GALLERY</h2>
+        <div class="masonry-grid">
+            <div class="grid-item"><img src="https://picsum.photos/seed/sneaker/800/600" alt="Sneaker"><div class="overlay">VIEW DETAILS</div></div>
+            <div class="grid-item"><img src="https://picsum.photos/seed/leather/800/600" alt="Leather"><div class="overlay">VIEW DETAILS</div></div>
+            <div class="grid-item"><img src="https://picsum.photos/seed/texture/800/600" alt="Texture"><div class="overlay">VIEW DETAILS</div></div>
+            <div class="grid-item"><img src="https://picsum.photos/seed/urban/800/600" alt="Urban"><div class="overlay">VIEW DETAILS</div></div>
         </div>
     </section>
 
-    <section class="community" id="community">
-        <div class="masonry">
-            <div class="card"><img src="https://loremflickr.com/400/700/fashion" alt="UGC 1"></div>
-            <div class="card"><img src="https://loremflickr.com/400/700/style" alt="UGC 2"></div>
-            <div class="card"><img src="https://loremflickr.com/400/700/nature" alt="UGC 3"></div>
-            <div class="card"><img src="https://loremflickr.com/400/700/fashion" alt="UGC 4"></div>
-            <div class="card"><img src="https://loremflickr.com/400/700/style" alt="UGC 5"></div>
-            <div class="card"><img src="https://loremflickr.com/400/700/nature" alt="UGC 6"></div>
+    <section id="waitlist" class="reveal">
+        <div class="waitlist-content">
+            <h2>Join the Urban Pop-Up Waitlist.</h2>
+            <form id="waitlist-form">
+                <input type="email" placeholder="EMAIL ADDRESS" required>
+                <button type="submit" class="submit-btn">Notify Me</button>
+            </form>
+            <div id="form-success" class="hidden">SUCCESS! WE'LL BE IN TOUCH.</div>
         </div>
     </section>
+</main>
 
-    <div id="checkout-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
-            <div id="step-1" class="step">
-                <h2>Select Your Pair</h2>
-                <label>Size</label>
-                <select id="size"><option>EU 40</option><option>EU 41</option><option>EU 42</option></select>
-                <label>Color</label>
-                <select id="color"><option>Electric Sage</option><option>Deep Earth</option></select>
-                <button class="btn-next" onclick="nextStep(2)">Next</button>
-            </div>
-            <div id="step-2" class="step" style="display:none">
-                <h2>Shipping Details</h2>
-                <input type="text" placeholder="Full Name" required>
-                <input type="text" placeholder="Address" required>
-                <button class="btn-next" onclick="nextStep(3)">Next</button>
-            </div>
-            <div id="step-3" class="step" style="display:none">
-                <h2>Confirm Order</h2>
-                <p>Your sustainable choice is ready for dispatch.</p>
-                <button class="btn-confirm" onclick="completeOrder()">Complete Order</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Material Explorer
-        document.querySelectorAll('.hotspot').forEach(spot => {
-            spot.addEventListener('click', () => {
-                document.getElementById('info-text').innerText = spot.getAttribute('data-info');
-            });
-        });
-
-        // Checkout Flow
-        function nextStep(step) {
-            document.querySelectorAll('.step').forEach(s => s.style.display = 'none');
-            document.getElementById('step-' + step).style.display = 'block';
-        }
-
-        function completeOrder() {
-            alert('Order Completed! Thank you for choosing Rumi Shoes.');
-            document.getElementById('checkout-modal').style.display = 'none';
-            nextStep(1);
-        }
-
-        // Intersection Observer for Fade-ins
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('fade-in');
-            observer.observe(section);
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
