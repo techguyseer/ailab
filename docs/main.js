@@ -1,52 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Header scroll effect
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+    const sourcingData = {
+        'upper': {
+            origin: 'Organic Cotton',
+            region: 'Sourced from GOTS certified farms in India',
+            impact: 'Reduced water consumption by 80% compared to conventional cotton.'
+        },
+        'laces': {
+            origin: 'Recycled PET',
+            region: 'Recovered ocean plastic from South East Asia',
+            impact: 'Prevents 12 plastic bottles from entering the ocean per pair.'
+        },
+        'sole': {
+            origin: 'Natural Rubber & Algae Bloom',
+            region: 'Sustainably harvested from Brazil',
+            impact: 'Carbon-negative footprint through algae sequestration.'
         }
-    });
-
-    // Comparison Slider
-    const slider = document.getElementById('compare-slider');
-    const valuePane = document.getElementById('value-pane');
-    if (slider && valuePane) {
-        slider.addEventListener('input', (e) => {
-            const val = e.target.value;
-            valuePane.style.width = `${val}%`;
-        });
-    }
-
-    // Custom Cursor
-    const cursor = document.getElementById('custom-cursor');
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-    });
-
-    document.querySelectorAll('a, button, .pill, .grid-item').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-active'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-active'));
-    });
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
+    const hotspots = document.querySelectorAll('.hotspot');
+    const infoPanel = document.getElementById('info-panel');
 
-    // Add reveal class to sections and observe
-    document.querySelectorAll('section').forEach(section => {
-        section.classList.add('reveal');
-        observer.observe(section);
+    hotspots.forEach(spot => {
+        spot.addEventListener('click', () => {
+            // Update active state
+            hotspots.forEach(s => s.classList.remove('active'));
+            spot.classList.add('active');
+
+            const part = spot.getAttribute('data-part');
+            const data = sourcingData[part];
+
+            // Update panel content with a smooth transition
+            infoPanel.style.opacity = '0';
+            
+            setTimeout(() => {
+                infoPanel.innerHTML = `
+                    <h3 style="text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">${part}</h3>
+                    <p><strong>Sourcing:</strong> ${data.origin}</p>
+                    <p><strong>Region:</strong> ${data.region}</p>
+                    <p style="margin-top: 15px; color: #6B6B6B; font-size: 0.9rem;">${data.impact}</p>
+                `;
+                infoPanel.style.opacity = '1';
+            }, 300);
+        });
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
