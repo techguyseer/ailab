@@ -1,49 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Waitlist Handler
-    const waitlistBtn = document.getElementById('waitlistBtn');
-    const footerWaitlist = document.getElementById('footerWaitlist');
-    const toast = document.getElementById('toast');
+    const header = document.getElementById('main-header');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-    const showToast = () => {
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
-    };
-
-    if (waitlistBtn) waitlistBtn.onclick = showToast;
-    if (footerWaitlist) footerWaitlist.onclick = (e) => {
-        e.preventDefault();
-        showToast();
-    };
-
-    // Calculator Logic
-    const slider = document.querySelector('#costSlider');
-    const display = document.querySelector('#priceDisplay');
-
-    if (slider && display) {
-        slider.oninput = () => {
-            const baseValue = 200;
-            const multiplier = 10;
-            const price = baseValue + (multiplier * parseInt(slider.value));
-            display.innerText = `$${price.toFixed(2)}`;
-        };
-    }
-
-    // Scroll Reveal Timeline
     const observerOptions = {
-        threshold: 0.2
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('active');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('[data-reveal]').forEach(el => {
+    document.querySelectorAll('.reveal').forEach(el => {
         observer.observe(el);
     });
 });
