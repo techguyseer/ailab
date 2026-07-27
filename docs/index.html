@@ -3,93 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Shoes | Luxury & Precision</title>
+    <title>Zoey Hats | Quiet Luxury</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header id="main-header">
-        <div class="logo">MIRA</div>
-        <nav>
-            <a href="#hero">Home</a>
-            <a href="#comparison">Value</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#checkout">Shop</a>
-        </nav>
-    </header>
+<body}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <img src="https://picsum.photos/seed/minimalist/1920/1080" alt="Hero Background" class="hero-video">
+            <div class="hero-overlay"></div>
+        </div}
+        <div class="hero-content">
+            <h1}ZOEY HATS</h1>
+            <p class="subheading">Defining the Art of Quiet Luxury</p>
+        </div}
+        <div class="signup-form">
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">JOIN</button>
+            </form>
+        </div}
+    </section>
 
-    <main>
-        <section id="hero" class="full-viewport">
-            <div class="video-container">
-                <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Background" class="hero-media">
-                <div class="overlay"></div>
-            </div>
-            <div class="hero-content">
-                <h1>PRECISION <br> IN EVERY STEP</h1>
-                <a href="#checkout" class="cta-ghost">Explore Collection</a>
-            </div>
-        </section>
+    <!-- Material Benefits Section -->
+    <section class="benefits">
+        <div class="grid">
+            <div class="benefit-item reveal">
+                <img src="https://picsum.photos/seed/wool/800/600" alt="Wool Material">
+                <h3}Pure Wool</h3>
+                <p>Sourced from the highest altitudes, ensuring unparalleled warmth and breathability.</p>
+            </div}
+            <div class="benefit-item reveal">
+                <img src="https://picsum.photos/seed/linen/800/600" alt="Linen Material">
+                <h3}Organic Linen</h3>
+                <p>Lightweight and timeless, crafted for the most demanding summer climates.</p>
+            </div}
+            <div class="benefit-item reveal">
+                <img src="https://picsum.photos/seed/silk/800/600" alt="Silk Material">
+                <h3}Royal Silk</h3>
+                <p>A touch of opulence, offering a subtle sheen and unmatched softness.</p>
+            </div}
+        </div}
+    </section>
 
-        <section id="comparison" class="section-padding">
-            <div class="container">
-                <h2>The Value Equation</h2>
-                <div class="slider-wrapper">
-                    <div class="comparison-container">
-                        <div class="pane premium">
-                            <img src="https://picsum.photos/seed/product/800/600" alt="Premium Material">
-                            <div class="label">PREMIUM</div>
-                        </div>
-                        <div class="pane value" id="value-pane">
-                            <img src="https://picsum.photos/seed/product-value/800/600" alt="Value Material">
-                            <div class="label">VALUE</div>
-                        </div>
-                        <input type="range" min="0" max="100" value="50" class="comparison-slider" id="compare-slider">
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Product Showcase Section -->
+    <section class="showcase">
+        <div class="showcase-item reveal">
+            <img src="https://picsum.photos/seed/detail/800/600" alt="Product Detail">
+            <div class="showcase-text">
+                <h2}Exquisite Detail</h2>
+                <p>Every stitch is a testament to our commitment to perfection and longevity.</p>
+            </div}
+        </div}
+        <div class="showcase-item reverse reveal">
+            <img src="https://picsum.photos/seed/lifestyle/800/600" alt="Lifestyle Look">
+            <div class="showcase-text">
+                <h2}Timeless Silhouette</h2>
+                <p>Designed to complement any wardrobe, transcending seasonal trends.</p>
+            </div}
+        </div}
+    </section>
 
-        <section id="gallery" class="section-padding">
-            <div class="container">
-                <h2>Seen in Mira</h2>
-                <div class="masonry-grid">
-                    <div class="grid-item"><img src="https://picsum.photos/seed/lifestyle/800/600" loading="lazy" alt="Lifestyle"></div>
-                    <div class="grid-item"><img src="https://picsum.photos/seed/urban/800/600" loading="lazy" alt="Urban"></div>
-                    <div class="grid-item"><img src="https://picsum.photos/seed/minimal/800/600" loading="lazy" alt="Minimal"></div>
-                    <div class="grid-item"><img src="https://picsum.photos/seed/fashion/800/600" loading="lazy" alt="Fashion"></div>
-                </div>
-            </div>
-        </section>
+    <!-- Sticky CTA -->
+    <a href="#" class="sticky-cta">SHOP NOW</a}
 
-        <section id="checkout" class="section-padding">
-            <div class="container">
-                <div class="checkout-card">
-                    <img src="https://picsum.photos/seed/detail/800/600" alt="Product Detail" class="product-thumb">
-                    <div class="product-info">
-                        <h3>Mira Classic / 01</h3>
-                        <p class="price">$450.00</p>
-                        <div class="size-selector">
-                            <span class="pill">US 8</span>
-                            <span class="pill active">US 9</span>
-                            <span class="pill">US 10</span>
-                            <span class="pill">US 11</span>
-                        </div>
-                        <button class="btn-buy">BUY NOW</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 MIRA SHOES. ALL RIGHTS RESERVED.</p>
-        </div>
-    </footer>
-
-    <div id="custom-cursor"></div>
-    <script src="main.js"></script>
-</body>
-</html>
+    <script src="script.js"></script>
+</body}
+</html}
