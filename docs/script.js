@@ -1,43 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Sticky Navigation
-    const nav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    });
+    // Waitlist Handler
+    const waitlistBtn = document.getElementById('waitlistBtn');
+    const footerWaitlist = document.getElementById('footerWaitlist');
+    const toast = document.getElementById('toast');
 
-    // 2. Countdown Timer
-    const targetDate = new Date('2026-12-31T00:00:00').getTime();
-    const updateTimer = () => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance < 0) {
-            document.querySelector('.timer-container').innerHTML = '<h3 style="color:white; font-family:Playfair Display;">The Drop is Live!</h3>';
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById('days').innerText = String(days).padStart(2, '0');
-        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    const showToast = () => {
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
     };
 
-    setInterval(updateTimer, 1000);
-    updateTimer();
+    if (waitlistBtn) waitlistBtn.onclick = showToast;
+    if (footerWaitlist) footerWaitlist.onclick = (e) => {
+        e.preventDefault();
+        showToast();
+    };
 
-    // 3. Intersection Observer for animations
+    // Calculator Logic
+    const slider = document.querySelector('#costSlider');
+    const display = document.querySelector('#priceDisplay');
+
+    if (slider && display) {
+        slider.oninput = () => {
+            const baseValue = 200;
+            const multiplier = 10;
+            const price = baseValue + (multiplier * parseInt(slider.value));
+            display.innerText = `$${price.toFixed(2)}`;
+        };
+    }
+
+    // Scroll Reveal Timeline
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.2
     };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -46,24 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.fade-in-up').forEach(element => {
-        observer.observe(element);
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+        observer.observe(el);
     });
-
-    // 4. Quantity Selector
-    const qtyValue = document.getElementById('qty-value');
-    const qtyMinus = document.getElementById('qty-minus');
-    const qtyPlus = document.getElementById('qty-plus');
-
-    if (qtyMinus && qtyPlus) {
-        qtyMinus.addEventListener('click', () => {
-            let val = parseInt(qtyValue.innerText);
-            if (val > 1) qtyValue.innerText = val - 1;
-        });
-
-        qtyPlus.addEventListener('click', () => {
-            let val = parseInt(qtyValue.innerText);
-            qtyValue.innerText = val + 1;
-        });
-    }
 });

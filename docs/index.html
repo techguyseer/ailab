@@ -3,109 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Soap | Luxury Immersive Experience</title>
+    <title>Rumi Shoes | Organic Minimalism</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #F2F0EA; color: #2D2D2D; font-family: 'Montserrat', sans-serif; margin: 0;">
-    <nav id="main-nav">
-        <div class="nav-container">
-            <div class="logo">MIRA</div>
-            <div class="nav-links">
-                <a href="#hero">Home</a>
-                <a href="#scents">Scent</a>
-                <a href="#countdown">Drop</a>
-                <a href="#shop">Shop</a>
+<body>
+
+    <header class="global-header">
+        <div class="header-container">
+            <div class="brand-logo">RUMI</div>
+            <button class="cta-button" id="waitlistBtn">Join Waitlist</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <h1 class="fade-in">Organic Minimalism. <br> Authentic Craft.</h1>
             </div>
-        </div>
-    </nav>
+            <img src="https://picsum.photos/seed/minimalism/1920/1080" alt="Minimalist landscape" class="hero-img">
+        </section>
 
-    <section id="hero" class="full-viewport">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Mira Soap</h1>
-            <div class="scroll-indicator">Scroll to Explore</div>
-        </div>
-    </section>
-
-    <section id="scents" class="section">
-        <div class="container">
-            <h2 class="section-title">The Scent Profile</h2>
-            <div class="scent-grid">
-                <div class="scent-card fade-in-up">
-                    <img src="https://picsum.photos/seed/floral/800/600" alt="Floral Note">
-                    <div class="card-overlay">
-                        <h3 class="card-title">Floral Bliss</h3>
-                        <p class="card-text">Freshly picked jasmine and wild lavender.</p>
-                    </div>
+        <section class="product-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item item-large">
+                    <img src="https://picsum.photos/seed/leather/800/600" alt="Leather Detail">
+                    <span class="gallery-label">Premium Leather</span>
                 </div>
-                <div class="scent-card fade-in-up">
-                    <img src="https://picsum.photos/seed/citrus/800/600" alt="Citrus Note">
-                    <div class="card-overlay">
-                        <h3 class="card-title">Zesty Citrus</h3>
-                        <p class="card-text">Bright bergamot and sun-ripened lemon.</p>
-                    </div>
+                <div class="gallery-item item-small">
+                    <img src="https://picsum.photos/seed/texture/800/600" alt="Texture Detail">
+                    <span class="gallery-label">Natural Texture</span>
                 </div>
-                <div class="scent-card fade-in-up">
-                    <img src="https://picsum.photos/seed/woody/800/600" alt="Woody Note">
-                    <div class="card-overlay">
-                        <h3 class="card-title">Earthy Woods</h3>
-                        <p class="card-text">Sandalwood and cedar for a grounded essence.</p>
-                    </div>
+                <div class="gallery-item item-medium">
+                    <img src="https://picsum.photos/seed/silhouette/800/600" alt="Shoe Silhouette">
+                    <span class="gallery-label">Timeless Silhouette</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="countdown" class="section full-viewport countdown-section">
-        <div class="container">
-            <h2 class="section-title light">The Drop Begins In</h2>
-            <div class="timer-container">
-                <div class="timer-block">
-                    <span id="days">00</span>
-                    <label>Days</label>
-                </div>
-                <div class="timer-block">
-                    <span id="hours">00</span>
-                    <label>Hours</label>
-                </div>
-                <div class="timer-block">
-                    <span id="minutes">00</span>
-                    <label>Minutes</label>
-                </div>
-                <div class="timer-block">
-                    <span id="seconds">00</span>
-                    <label>Seconds</label>
+        <section class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-stage" data-reveal>
+                <div class="timeline-content left">
+                    <img src="https://picsum.photos/seed/nature/400/300" alt="Sourcing">
+                    <h3>Raw Material Sourcing</h3>
+                    <p>Ethically harvested organic materials from sustainable forests.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="shop" class="section">
-        <div class="container shop-container">
-            <div class="shop-visual fade-in-up">
-                <img src="https://picsum.photos/seed/product/800/600" alt="Mira Soap Product">
-            </div>
-            <div class="shop-details fade-in-up">
-                <h2 class="shop-title">Mira Signature Bar</h2>
-                <p class="price">£24.00</p>
-                <div class="purchase-options">
-                    <div class="quantity-selector">
-                        <button type="button" id="qty-minus">−</button>
-                        <span id="qty-value">1</span
-                        <button type="button" id="qty-plus">+</button>
-                    </div>
-                    <button class="cta-button">ADD TO CART</button>
+            <div class="timeline-stage" data-reveal>
+                <div class="timeline-content right">
+                    <img src="https://picsum.photos/seed/workshop/400/300" alt="Crafting">
+                    <h3>Ethical Crafting</h3>
+                    <p>Hand-stitched by artisans receiving fair living wages.</p>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="timeline-stage" data-reveal>
+                <div class="timeline-content left">
+                    <img src="https://picsum.photos/seed/detail/400/300" alt="Inspection">
+                    <h3>Quality Inspection</h3>
+                    <p>Rigorous 20-point check for durability and comfort.</p>
+                </div>
+            </div>
+            <div class="timeline-stage" data-reveal>
+                <div class="timeline-content right">
+                    <img src="https://picsum.photos/seed/package/400/300" alt="Packaging">
+                    <h3>Sustainable Packaging</h3>
+                    <p>100% biodegradable materials, zero plastic.</p>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 Mira Soap. All rights reserved.</p>
+        <section class="calculator-section">
+            <div class="calculator-card">
+                <h2>Transparency Calculator</h2>
+                <p>Adjust material quality to see price impact</p>
+                <div class="calc-control">
+                    <label for="costSlider">Material Quality</label>
+                    <input type="range" id="costSlider" min="10" max="100" value="50">
+                </div>
+                <div class="price-display">
+                    Total: <span id="priceDisplay">$500.00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="global-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Rumi Shoes. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#" id="footerWaitlist">Join Waitlist</a>
+            </div>
+        </div>
     </footer>
+
+    <div id="toast" class="toast">Thank you for joining the waitlist!</div>
 
     <script src="script.js"></script>
 </body>
