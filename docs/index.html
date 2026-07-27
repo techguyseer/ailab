@@ -3,68 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immersive Experience</title>
+    <title>Mira Shoes | Luxury & Precision</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="main-nav">
+    <header id="main-header">
+        <div class="logo">MIRA</div>
         <nav>
-            <div class="nav-links">
-                <a href="#shop">Shop</a>
-                <a href="#about">About</a>
-                <a href="#account">Account</a>
-            </div>
+            <a href="#hero">Home</a>
+            <a href="#comparison">Value</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#checkout">Shop</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Cinematic" class="hero-media">
-        <h1 class="hero-title">The Atmosphere</h1>
-    </section>
+    <main>
+        <section id="hero" class="full-viewport">
+            <div class="video-container">
+                <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Background" class="hero-media">
+                <div class="overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1>PRECISION <br> IN EVERY STEP</h1>
+                <a href="#checkout" class="cta-ghost">Explore Collection</a>
+            </div>
+        </section>
 
-    <section id="shop" class="product-grid">
-        <div class="product-item" data-fade>
-            <div class="product-image-container">
-                <img src="https://picsum.photos/seed/minimal/800/1000" alt="Minimal Product">
-                <div class="hover-label">View Details</div>
+        <section id="comparison" class="section-padding">
+            <div class="container">
+                <h2>The Value Equation</h2>
+                <div class="slider-wrapper">
+                    <div class="comparison-container">
+                        <div class="pane premium">
+                            <img src="https://picsum.photos/seed/product/800/600" alt="Premium Material">
+                            <div class="label">PREMIUM</div>
+                        </div>
+                        <div class="pane value" id="value-pane">
+                            <img src="https://picsum.photos/seed/product-value/800/600" alt="Value Material">
+                            <div class="label">VALUE</div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="comparison-slider" id="compare-slider">
+                    </div>
+                </div>
             </div>
-            <p class="product-desc">Minimalist Essence</p>
-        </div>
-        <div class="product-item" data-fade>
-            <div class="product-image-container">
-                <img src="https://picsum.photos/seed/structure/800/1000" alt="Structural Product">
-                <div class="hover-label">View Details</div>
-            </div>
-            <p class="product-desc">Structural Geometry</p>
-        </div>
-        <div class="product-item" data-fade>
-            <div class="product-image-container">
-                <img src="https://picsum.photos/seed/geometry/800/1000" alt="Geometric Product">
-                <div class="hover-label">View Details</div>
-            </div>
-            <p class="product-desc">Geometric Form</p>
-        </div>
-    </section>
+        </section>
 
-    <footer id="about">
-        <div class="footer-content">
-            <h2>The Guestlist</h2>
-            <form id="email-form">
-                <input type="email" placeholder="Email Address" required>
-                <button type="submit">Join</button>
-            </form>
-            <div id="form-thanks" class="hidden">Thank You.</div>
-            <div class="legal">
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
+        <section id="gallery" class="section-padding">
+            <div class="container">
+                <h2>Seen in Mira</h2>
+                <div class="masonry-grid">
+                    <div class="grid-item"><img src="https://picsum.photos/seed/lifestyle/800/600" loading="lazy" alt="Lifestyle"></div>
+                    <div class="grid-item"><img src="https://picsum.photos/seed/urban/800/600" loading="lazy" alt="Urban"></div>
+                    <div class="grid-item"><img src="https://picsum.photos/seed/minimal/800/600" loading="lazy" alt="Minimal"></div>
+                    <div class="grid-item"><img src="https://picsum.photos/seed/fashion/800/600" loading="lazy" alt="Fashion"></div>
+                </div>
             </div>
+        </section>
+
+        <section id="checkout" class="section-padding">
+            <div class="container">
+                <div class="checkout-card">
+                    <img src="https://picsum.photos/seed/detail/800/600" alt="Product Detail" class="product-thumb">
+                    <div class="product-info">
+                        <h3>Mira Classic / 01</h3>
+                        <p class="price">$450.00</p>
+                        <div class="size-selector">
+                            <span class="pill">US 8</span>
+                            <span class="pill active">US 9</span>
+                            <span class="pill">US 10</span>
+                            <span class="pill">US 11</span>
+                        </div>
+                        <button class="btn-buy">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MIRA SHOES. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="custom-cursor"></div>
+    <script src="main.js"></script>
 </body>
 </html>
