@@ -3,73 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoey Hats | Quiet Luxury</title>
+    <title>Jino Noodle | Brutalist Heat</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body}
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-video-container">
-            <img src="https://picsum.photos/seed/minimalist/1920/1080" alt="Hero Background" class="hero-video">
-            <div class="hero-overlay"></div>
-        </div}
-        <div class="hero-content">
-            <h1}ZOEY HATS</h1>
-            <p class="subheading">Defining the Art of Quiet Luxury</p>
-        </div}
-        <div class="signup-form">
-            <form>
-                <input type="email" placeholder="Email address" required>
-                <button type="submit">JOIN</button>
-            </form>
-        </div}
-    </section>
+<body>
+    <nav class="brutalist-nav">
+        <div class="nav-content">
+            <a href="#hero">HOME</a>
+            <a href="#scale">THE SCALE</a>
+            <a href="#fame">FAME</a>
+            <a href="#buy">BUY NOW</a>
+        </div>
+    </nav>
 
-    <!-- Material Benefits Section -->
-    <section class="benefits">
-        <div class="grid">
-            <div class="benefit-item reveal">
-                <img src="https://picsum.photos/seed/wool/800/600" alt="Wool Material">
-                <h3}Pure Wool</h3>
-                <p>Sourced from the highest altitudes, ensuring unparalleled warmth and breathability.</p>
-            </div}
-            <div class="benefit-item reveal">
-                <img src="https://picsum.photos/seed/linen/800/600" alt="Linen Material">
-                <h3}Organic Linen</h3>
-                <p>Lightweight and timeless, crafted for the most demanding summer climates.</p>
-            </div}
-            <div class="benefit-item reveal">
-                <img src="https://picsum.photos/seed/silk/800/600" alt="Silk Material">
-                <h3}Royal Silk</h3>
-                <p>A touch of opulence, offering a subtle sheen and unmatched softness.</p>
-            </div}
-        </div}
-    </section>
+    <main>
+        <section id="hero" class="brutalist-section">
+            <div class="video-container">
+                <video autoplay muted loop playsinline poster="https://picsum.photos/seed/steam/1920/1080">
+                    <source src="" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+            </div>
+            <h1 class="hero-title">JINO NOODLE</h1>
+        </section>
 
-    <!-- Product Showcase Section -->
-    <section class="showcase">
-        <div class="showcase-item reveal">
-            <img src="https://picsum.photos/seed/detail/800/600" alt="Product Detail">
-            <div class="showcase-text">
-                <h2}Exquisite Detail</h2>
-                <p>Every stitch is a testament to our commitment to perfection and longevity.</p>
-            </div}
-        </div}
-        <div class="showcase-item reverse reveal">
-            <img src="https://picsum.photos/seed/lifestyle/800/600" alt="Lifestyle Look">
-            <div class="showcase-text">
-                <h2}Timeless Silhouette</h2>
-                <p>Designed to complement any wardrobe, transcending seasonal trends.</p>
-            </div}
-        </div}
-    </section>
+        <section id="scale" class="brutalist-section">
+            <div class="grid-container">
+                <div class="col-left">
+                    <h2>THE SCALE</h2>
+                    <p>SENSE THE HEAT. CHOOSE YOUR LEVEL.</p>
+                </div>
+                <div class="col-right">
+                    <div class="slider-wrapper">
+                        <input type="range" id="scale-input" min="1" max="3" step="1" value="1">
+                        <div id="level-display">1</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sticky CTA -->
-    <a href="#" class="sticky-cta">SHOP NOW</a}
+        <section id="fame" class="brutalist-section">
+            <h2 class="skewed-title">WALL OF FAME</h2>
+            <div class="masonry-grid" id="ugc-feed">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <footer id="buy" class="brutalist-footer">
+            <div class="cta-grid">
+                <a href="#" class="cta-block">AMAZON</a>
+                <a href="#" class="cta-block">WALMART</a>
+                <a href="#" class="cta-block">TARGET</a>
+            </div>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
-</body}
-</html}
+</body>
+</html>
