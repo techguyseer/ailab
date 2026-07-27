@@ -1,44 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Calculator Logic
-    const buttons = document.querySelectorAll('.condition-selector button');
-    const display = document.getElementById('credit-value');
+    // Scarcity Counter Logic
+    let slots = 50; 
+    const counterElement = document.querySelector('.slots-count');
 
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Update Active State
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Update Value with Count-up
-            const targetValue = parseInt(btn.getAttribute('data-value'));
-            animateValue(display, parseInt(display.innerText), targetValue, 400);
-        });
-    });
-
-    function animateValue(obj, start, end, duration) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            obj.innerHTML = Math.floor(progress * (end - start) + start);
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        window.requestAnimationFrame(step);
+    function updateCounter() {
+        if (slots > 5) {
+            slots -= Math.floor(Math.random() * 2);
+            counterElement.innerText = slots;
+        }
     }
+    setInterval(updateCounter, 15000);
 
-    // Waitlist Form Logic
-    const form = document.getElementById('waitlist-form');
-    const successMsg = document.getElementById('form-success');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        form.style.display = 'none';
-        successMsg.classList.remove('hidden');
-    });
-
-    // Intersection Observer for Reveal Animations
+    // Intersection Observer for Reveal Animation
     const observerOptions = {
         threshold: 0.1
     };
@@ -51,5 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Smooth Scroll for CTA
+    document.querySelector('.btn-primary').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#checkout').scrollIntoView({ behavior: 'smooth' });
+    });
 });

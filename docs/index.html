@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumi Shoes | Circularity</title>
+    <title>Rumi Shoes | Quiet Luxury</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Critical CSS for instant first paint */
-        :root {
-            --electric-lime: #CCFF00;
-            --concrete-grey: #B2B2B2;
-            --deep-charcoal: #1A1A1A;
-            --pure-white: #FFFFFF;
-            --ink-black: #000000;
-        }
-        body { margin: 0; font-family: 'Inter', 'Helvetica', sans-serif; background: var(--pure-white); color: var(--deep-charcoal); }
-        header { 
-            position: sticky; top: 0; z-index: 1000; 
-            background: var(--pure-white); border-bottom: 4px solid var(--ink-black); 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 1rem 2rem; backdrop-filter: blur(10px);
-        }
-        .logo { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; color: var(--ink-black); }
-        .cta-btn { 
-            background: var(--electric-lime); color: var(--ink-black); 
-            border: 3px solid var(--ink-black); padding: 0.5rem 1rem; 
-            font-weight: bold; text-transform: uppercase; cursor: pointer;
-            text-decoration: none; letter-spacing: 0.1em;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <div class="logo">RUMI SHOES</div>
-    <a href="#waitlist" class="cta-btn">Trade-In Now</a>
-</header>
-
-<main>
-    <section id="hero" class="reveal">
-        <div class="hero-overlay">
-            <h1>CIRCULAR<br>PROCESS</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Background" class="hero-bg">
+            <div class="hero-overlay"></div>
         </div>
-        <img src="https://picsum.photos/seed/circular/1920/1080" alt="Circular Process" class="hero-bg">
+        <div class="hero-content">
+            <h1>Rumi Shoes</h1>
+            <a href="#checkout" class="btn-primary">Pre-Order Now</a>
+        </div>
     </section>
 
-    <section id="calculator" class="reveal">
-        <div class="calc-container">
-            <div class="calc-text">
-                <h2>CREDIT SYSTEM</h2>
-                <p>Return your worn-out Rumi footwear and receive credits toward your next pair. We believe in strength, transparency, and a closed-loop future.</p>
-            </div>
-            <div class="calc-tool">
-                <div class="condition-selector">
-                    <button data-value="50">LIKE NEW</button>
-                    <button data-value="30" class="active">GOOD</button>
-                    <button data-value="15">FAIR</button>
+    <!-- Sustainability Pillars -->
+    <section class="pillars">
+        <div class="container">
+            <div class="grid">
+                <div class="card reveal">
+                    <img src="https://picsum.photos/seed/materials/800/600" alt="Sustainable Materials">
+                    <h2>Materials</h2>
+                    <p>Ethically sourced, organic textiles and recycled rubbers that honor the earth.</p>
                 </div>
-                <div class="value-display">
-                    $<span id="credit-value">30</span>
+                <div class="card reveal">
+                    <img src="https://picsum.photos/seed/craft/800/600" alt="Master Craftsmanship">
+                    <h2>Craft</h2>
+                    <p>Hand-stitched by master artisans using techniques passed through generations.</p>
+                </div>
+                <div class="card reveal">
+                    <img src="https://picsum.photos/seed/nature/800/600" alt="Nature Inspired">
+                    <h2>Nature</h2>
+                    <p>A design language inspired by organic forms and the silence of the wilderness.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="reveal">
-        <h2>THE CIRCULAR GALLERY</h2>
-        <div class="masonry-grid">
-            <div class="grid-item"><img src="https://picsum.photos/seed/sneaker/800/600" alt="Sneaker"><div class="overlay">VIEW DETAILS</div></div>
-            <div class="grid-item"><img src="https://picsum.photos/seed/leather/800/600" alt="Leather"><div class="overlay">VIEW DETAILS</div></div>
-            <div class="grid-item"><img src="https://picsum.photos/seed/texture/800/600" alt="Texture"><div class="overlay">VIEW DETAILS</div></div>
-            <div class="grid-item"><img src="https://picsum.photos/seed/urban/800/600" alt="Urban"><div class="overlay">VIEW DETAILS</div></div>
+    <!-- Scarcity Engine -->
+    <section class="scarcity">
+        <div class="scarcity-box reveal">
+            <span class="icon">⏳</span>
+            <p>Limited Release: <span class="slots-count">50</span> slots remaining.</p>
         </div>
     </section>
 
-    <section id="waitlist" class="reveal">
-        <div class="waitlist-content">
-            <h2>Join the Urban Pop-Up Waitlist.</h2>
-            <form id="waitlist-form">
-                <input type="email" placeholder="EMAIL ADDRESS" required>
-                <button type="submit" class="submit-btn">Notify Me</button>
-            </form>
-            <div id="form-success" class="hidden">SUCCESS! WE'LL BE IN TOUCH.</div>
+    <!-- Checkout Section -->
+    <section id="checkout" class="checkout">
+        <div class="container">
+            <div class="form-wrapper reveal">
+                <h2>Secure Your Pair</h2>
+                <form id="order-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Shipping Address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Payment Method (Simplified)" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Complete Order</button>
+                </form>
+            </div>
         </div>
     </section>
-</main>
 
-<script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 Rumi Shoes. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
