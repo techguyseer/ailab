@@ -3,115 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumi Soap | Organic Minimalism</title>
+    <title>Eco-Minimalist Immersive Experience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Section 1: Hero Experience -->
+    <!-- Section 1: The Immersive Hero -->
     <section class="hero">
-        <div class="hero-video-overlay">
-            <img src="https://picsum.photos/seed/texture/1920/1080" alt="Cinematic background" class="hero-img">
-        </div}
+        <div class="hero-image-container">
+            <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Image" class="parallax-img">
+        </div>
         <div class="hero-content">
-            <h1>Rumi Soap</h1>
-            <a href="#philosophy" class="ghost-button">Discover</a>
+            <h1>Pure Essence,<br>Mindful Living.</h1>
+            <div class="scroll-indicator">
+                <span>Scroll to Explore</span>
+                <div class="line"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Section 2: The Philosophy -->
-    <section id="philosophy" class="section philosophy">
-        <div class="container-narrow">
-            <h2>The Philosophy</h2>
-            <p>Organic minimalism is not just a design choice, but a commitment to the purity of nature. Rumi Soap blends ancestral wisdom with modern luxury, creating a ritual of cleansing that restores both the skin and the spirit.</p>
-        </div>
-    </section>
-
-    <!-- Section 3: Interactive Ingredient Gallery -->
-    <section class="section gallery">
+    <!-- Section 2: The Brand Philosophy -->
+    <section class="philosophy reveal">
         <div class="container">
-            <h2 class="center-text">Pure Ingredients</h2>
-            <div class="ingredient-grid">
-                <div class="ingredient-card">
-                    <img src="https://picsum.photos/seed/botanical/800/600" alt="Botanical" loading="lazy">
-                    <div class="card-overlay">
-                        <span class="label">Botanicals</span>
-                        <p class="description">Sourced from wild-grown alpine meadows.</p>
-                    </div>
+            <h2 class="philosophy-title">Our Philosophy</h2>
+            <div class="philosophy-text">
+                <p>We believe in the harmony between modern design and the natural world. By stripping away the excess, we uncover the true essence of sustainable luxury. Every detail is curated with intention, ensuring a footprint that respects the earth and a spirit that elevates the home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Transparency Map -->
+    <section class="transparency">
+        <div class="container">
+            <h2 class="section-title">Transparency Map</h2>
+            <div class="map-container">
+                <img src="https://picsum.photos/seed/origin/800/600" alt="Origin Map" class="map-img">
+                <div class="hotspot" style="top: 30%; left: 40%;" data-info="Sourced from sustainable forests in Scandinavia."></div>
+                <div class="hotspot" style="top: 60%; left: 70%;" data-info="Hand-crafted in small batches in Tuscany."></div>
+                <div class="hotspot" style="top: 45%; left: 20%;" data-info="100% organic cotton from rain-fed farms."></div>
+            </div>
+            <div class="map-legend">
+                <span class="legend-item"><span class="dot sage"></span> Origin</span>
+                <span class="legend-item"><span class="dot charcoal"></span> Process</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Product Teaser Grid -->
+    <section class="teaser">
+        <div class="grid">
+            <div class="grid-item">
+                <img src="https://picsum.photos/seed/texture/800/1000" alt="Texture Detail">
+                <div class="overlay">
+                    <span class="overlay-text">Coming Soon</span>
+                    <p class="caption">Tactile Elegance</p>
                 </div>
-                <div class="ingredient-card">
-                    <img src="https://picsum.photos/seed/oil/800/600" alt="Oil" loading="lazy">
-                    <div class="card-overlay">
-                        <span class="label">Pure Oils</span>
-                        <p class="description">Cold-pressed organic olive and jojoba.</p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <img src="https://picsum.photos/seed/clay/800/600" alt="Clay" loading="lazy">
-                    <div class="card-overlay">
-                        <span class="label">Mineral Clay</span>
-                        <p class="description">Deeply purifying volcanic deposits.</p>
-                    </div>
-                </div>
-                <div class="ingredient-card">
-                    <img src="https://picsum.photos/seed/water/800/600" alt="Water" loading="lazy">
-                    <div class="card-overlay">
-                        <span class="label">Spring Water</span>
-                        <p class="description">Filtered through ancient limestone.</p>
-                    </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://picsum.photos/seed/detail/800/1000" alt="Product Detail">
+                <div class="overlay">
+                    <span class="overlay-text">Coming Soon</span>
+                    <p class="caption">Pure Form</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Shoppable Product Grid -->
-    <section class="section products">
-        <div class="container">
-            <h2 class="center-text">The Collection</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="https://picsum.photos/seed/soap1/800/600" alt="Soap 1" loading="lazy">
-                    <h3>Lunar Cedar</h3>
-                    <p class="price">$24.00</p>
-                    <button class="ghost-button add-to-ritual">Add to Ritual</button>
-                </div>
-                <div class="product-item">
-                    <img src="https://picsum.photos/seed/soap2/800/600" alt="Soap 2" loading="lazy">
-                    <h3>Solar Amber</h3>
-                    <p class="price">$24.00</p>
-                    <button class="ghost-button add-to-ritual">Add to Ritual</button>
-                </div>
-                <div class="product-item">
-                    <img src="https://picsum.photos/seed/soap3/800/600" alt="Soap 3" loading="lazy">
-                    <h3>Ocean Mist</h3>
-                    <p class="price">$24.00</p>
-                    <button class="ghost-button add-to-ritual">Add to Ritual</button>
-                </div>
-            </div>
+    <!-- Section 5: Lead Capture -->
+    <section class="lead-capture">
+        <div class="capture-container">
+            <h2>Join the Journey.</h2>
+            <form id="email-form" class="capture-form">
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Notify Me</button>
+            </form>
         </div>
     </section>
-
-    <!-- Section 5: #RumiRitual -->
-    <section class="section ugc">
-        <div class="container">
-            <h2 class="center-text">#RumiRitual</h2>
-            <div class="ugc-grid">
-                <img src="https://picsum.photos/seed/lifestyle1/800/600" alt="UGC 1" class="ugc-img" loading="lazy">
-                <img src="https://picsum.photos/seed/lifestyle2/800/600" alt="UGC 2" class="ugc-img" loading="lazy">
-                <img src="https://picsum.photos/seed/lifestyle3/800/600" alt="UGC 3" class="ugc-img" loading="lazy">
-                <img src="https://picsum.photos/seed/lifestyle4/800/600" alt="UGC 4" class="ugc-img" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
 
     <script src="script.js"></script>
 </body>
