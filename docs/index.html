@@ -3,86 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-Minimalist Immersive Experience</title>
+    <title>Rumi Soap | Science, Simplified.</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Section 1: The Immersive Hero -->
-    <section class="hero">
-        <div class="hero-image-container">
-            <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Image" class="parallax-img">
-        </div>
-        <div class="hero-content">
-            <h1>Pure Essence,<br>Mindful Living.</h1>
-            <div class="scroll-indicator">
-                <span>Scroll to Explore</span>
-                <div class="line"></div>
+    <header>
+        <nav>
+            <div class="logo">RUMI</div>
+            <div class="nav-links">
+                <a href="#ingredients">Ingredients</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#subscribe">Subscribe</a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Section 2: The Brand Philosophy -->
-    <section class="philosophy reveal">
-        <div class="container">
-            <h2 class="philosophy-title">Our Philosophy</h2>
-            <div class="philosophy-text">
-                <p>We believe in the harmony between modern design and the natural world. By stripping away the excess, we uncover the true essence of sustainable luxury. Every detail is curated with intention, ensuring a footprint that respects the earth and a spirit that elevates the home.</p>
+    <main>
+        <section id="hero" class="hero section">
+            <div class="hero-content">
+                <h1>SCIENCE, SIMPLIFIED.</h1>
+                <a href="#ingredients" class="cta-button">Explore the Truth</a>
             </div>
-        </div>
-    </section>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/minimalist/800/600" alt="Rumi Soap Product" loading="lazy">
+            </div>
+        </section>
 
-    <!-- Section 3: The Transparency Map -->
-    <section class="transparency">
-        <div class="container">
-            <h2 class="section-title">Transparency Map</h2>
-            <div class="map-container">
-                <img src="https://picsum.photos/seed/origin/800/600" alt="Origin Map" class="map-img">
-                <div class="hotspot" style="top: 30%; left: 40%;" data-info="Sourced from sustainable forests in Scandinavia."></div>
-                <div class="hotspot" style="top: 60%; left: 70%;" data-info="Hand-crafted in small batches in Tuscany."></div>
-                <div class="hotspot" style="top: 45%; left: 20%;" data-info="100% organic cotton from rain-fed farms."></div>
-            </div>
-            <div class="map-legend">
-                <span class="legend-item"><span class="dot sage"></span> Origin</span>
-                <span class="legend-item"><span class="dot charcoal"></span> Process</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Product Teaser Grid -->
-    <section class="teaser">
-        <div class="grid">
-            <div class="grid-item">
-                <img src="https://picsum.photos/seed/texture/800/1000" alt="Texture Detail">
-                <div class="overlay">
-                    <span class="overlay-text">Coming Soon</span>
-                    <p class="caption">Tactile Elegance</p>
+        <section id="ingredients" class="section">
+            <h2 class="section-title">THE INGREDIENT TRUTH</h2>
+            <div class="ingredient-grid">
+                <div class="ingredient-tile">
+                    <img src="https://picsum.photos/seed/laboratory/400/400" alt="Laboratory">
+                    <p>Pure Synthetic Base</p>
+                </div>
+                <div class="ingredient-tile">
+                    <img src="https://picsum.photos/seed/botanical/400/400" alt="Botanical">
+                    <p>Organic Botanicals</p>
+                </div>
+                <div class="ingredient-tile">
+                    <img src="https://picsum.photos/seed/water/400/400" alt="Water">
+                    <p>Deionized Water</p>
+                </div>
+                <div class="ingredient-tile">
+                    <img src="https://picsum.photos/seed/texture/400/400" alt="Texture">
+                    <p>Micronized Texturizers</p>
                 </div>
             </div>
-            <div class="grid-item">
-                <img src="https://picsum.photos/seed/detail/800/1000" alt="Product Detail">
-                <div class="overlay">
-                    <span class="overlay-text">Coming Soon</span>
-                    <p class="caption">Pure Form</p>
-                </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2 class="section-title">VISUAL PROOF</h2>
+            <div class="gallery-masonry">
+                <img src="https://picsum.photos/seed/shelf/600/800" alt="User Gallery 1" loading="lazy">
+                <img src="https://picsum.photos/seed/bathroom/800/600" alt="User Gallery 2" loading="lazy">
+                <img src="https://picsum.photos/seed/interior/600/600" alt="User Gallery 3" loading="lazy">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section 5: Lead Capture -->
-    <section class="lead-capture">
-        <div class="capture-container">
-            <h2>Join the Journey.</h2>
-            <form id="email-form" class="capture-form">
-                <input type="email" placeholder="Email Address" required>
-                <button type="submit">Notify Me</button>
-            </form>
-        </div>
-    </section>
+        <footer id="subscribe">
+            <div class="footer-content">
+                <h2>Join the Evolution.</h2>
+                <form id="subscribe-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Join</button>
+                </form>
+                <img src="https://picsum.photos/seed/abstract/200/200" alt="Footer Accent" class="footer-accent">
+            </div>
+        </footer>
+    </main>
 
-    <script src="script.js"></script>
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form Handling
+        document.getElementById('subscribe-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const input = e.target.querySelector('input');
+            btn.textContent = 'Success';
+            input.value = '';
+            btn.disabled = true;
+        });
+    
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
