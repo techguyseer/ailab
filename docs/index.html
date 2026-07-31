@@ -3,111 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumi Soap | Science, Simplified.</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mira Shoes | Modern Brutalist Experience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RUMI</div>
-            <div class="nav-links">
-                <a href="#ingredients">Ingredients</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#subscribe">Subscribe</a>
+    <div class="global-wrapper">
+        <!-- Section 1: Hero -->
+        <section id="hero" class="section hero">
+            <div class="hero-bg">
+                <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Background" loading="eager">
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero" class="hero section">
-            <div class="hero-content">
-                <h1>SCIENCE, SIMPLIFIED.</h1>
-                <a href="#ingredients" class="cta-button">Explore the Truth</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://picsum.photos/seed/minimalist/800/600" alt="Rumi Soap Product" loading="lazy">
+            <div class="hero-overlay">
+                <h1 class="display-heading">MIRA SHOES<br>STEP INTO RAW</h1>
+                <a href="#shop" class="cta-button">SHOP THE DROP</a>
             </div>
         </section>
 
-        <section id="ingredients" class="section">
-            <h2 class="section-title">THE INGREDIENT TRUTH</h2>
-            <div class="ingredient-grid">
-                <div class="ingredient-tile">
-                    <img src="https://picsum.photos/seed/laboratory/400/400" alt="Laboratory">
-                    <p>Pure Synthetic Base</p>
+        <hr class="heavy-rule">
+
+        <!-- Section 2: Shop the Drop -->
+        <section id="shop" class="section shop">
+            <h2 class="display-heading section-title">SHOP THE DROP</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://picsum.photos/seed/sneaker1/800/600" alt="Sneaker 1" loading="lazy">
+                    <div class="product-info">
+                        <h3>SNEAKER 01</h3>
+                        <p>$199.00</p>
+                    </div>
                 </div>
-                <div class="ingredient-tile">
-                    <img src="https://picsum.photos/seed/botanical/400/400" alt="Botanical">
-                    <p>Organic Botanicals</p>
+                <div class="product-card">
+                    <img src="https://picsum.photos/seed/sneaker2/800/600" alt="Sneaker 2" loading="lazy">
+                    <div class="product-info">
+                        <h3>SNEAKER 02</h3>
+                        <p>$249.00</p>
+                    </div>
                 </div>
-                <div class="ingredient-tile">
-                    <img src="https://picsum.photos/seed/water/400/400" alt="Water">
-                    <p>Deionized Water</p>
-                </div>
-                <div class="ingredient-tile">
-                    <img src="https://picsum.photos/seed/texture/400/400" alt="Texture">
-                    <p>Micronized Texturizers</p>
+                <div class="product-card">
+                    <img src="https://picsum.photos/seed/sneaker3/800/600" alt="Sneaker 3" loading="lazy">
+                    <div class="product-info">
+                        <h3>SNEAKER 03</h3>
+                        <p>$219.00</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="gallery" class="section">
-            <h2 class="section-title">VISUAL PROOF</h2>
-            <div class="gallery-masonry">
-                <img src="https://picsum.photos/seed/shelf/600/800" alt="User Gallery 1" loading="lazy">
-                <img src="https://picsum.photos/seed/bathroom/800/600" alt="User Gallery 2" loading="lazy">
-                <img src="https://picsum.photos/seed/interior/600/600" alt="User Gallery 3" loading="lazy">
+        <hr class="heavy-rule">
+
+        <!-- Section 3: Street Proof -->
+        <section id="street" class="section street">
+            <h2 class="display-heading section-title">STREET PROOF</h2>
+            <div class="film-strip">
+                <img src="https://picsum.photos/seed/urban/800/600" alt="UGC 1" loading="lazy">
+                <img src="https://picsum.photos/seed/street/800/600" alt="UGC 2" loading="lazy">
+                <img src="https://picsum.photos/seed/city/800/600" alt="UGC 3" loading="lazy">
+                <img src="https://picsum.photos/seed/lifestyle/800/600" alt="UGC 4" loading="lazy">
             </div>
         </section>
+    </div>
 
-        <footer id="subscribe">
-            <div class="footer-content">
-                <h2>Join the Evolution.</h2>
-                <form id="subscribe-form">
-                    <input type="email" placeholder="Email Address" required>
-                    <button type="submit">Join</button>
-                </form>
-                <img src="https://picsum.photos/seed/abstract/200/200" alt="Footer Accent" class="footer-accent">
-            </div>
-        </footer>
-    </main>
+    <!-- Section 4: Footer Checkout -->
+    <footer class="checkout-bar">
+        <div class="checkout-container">
+            <div class="price-total">TOTAL: <span id="total-price">$0.00</span></div>
+            <button class="cta-button checkout-btn">CHECKOUT NOW</button>
+            <div class="cart-qty">CART: <span id="cart-count">0</span></div>
+        </div>
+    </footer>
 
-    <script>
-        // Intersection Observer for fade-in animations
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Form Handling
-        document.getElementById('subscribe-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const input = e.target.querySelector('input');
-            btn.textContent = 'Success';
-            input.value = '';
-            btn.disabled = true;
-        });
-    
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
