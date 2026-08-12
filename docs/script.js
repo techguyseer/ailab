@@ -1,51 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Entrance Animations
+    // Custom Cursor logic
+    const cursor = document.getElementById('custom-cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('a, button, .card, .gallery-item').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('expand'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('expand'));
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Reveal on scroll using Intersection Observer
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('active');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.section').forEach(section => {
-        observer.observe(section);
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
     });
 
-    // Simple Checkout Simulation
-    const cartCountEl = document.getElementById('cart-count');
-    const totalPriceEl = document.getElementById('total-price');
-    let count = 0;
-    let total = 0;
-
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('click', () => {
-            count++;
-            const price = parseFloat(card.querySelector('p').innerText.replace('$', ''));
-            total += price;
-            
-            cartCountEl.innerText = count;
-            totalPriceEl.innerText = `$${total.toFixed(2)}`;
-            
-            // Visual feedback
-            card.style.borderColor = '#CCFF00';
-            setTimeout(() => { card.style.borderColor = '#000000'; }, 200);
-        });
-    });
-
-    document.querySelector('.checkout-btn').addEventListener('click', () => {
-        if (count === 0) {
-            alert('Your cart is empty!');
-        } else {
-            alert(`Order placed! Total: $${total.toFixed(2)}`);
-            count = 0;
-            total = 0;
-            cartCountEl.innerText = count;
-            totalPriceEl.innerText = '$0.00';
-        }
+    // Form submission (mock)
+    const form = document.querySelector('.signup-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = form.querySelector('input').value;
+        alert(`Thank you for joining the Rumi waitlist: ${email}`);
+        form.reset();
     });
 });

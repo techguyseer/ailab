@@ -3,138 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumi Shoes | Circular Footwear</title>
+    <title>Rumi Shoes | Sophisticated Sustainability</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="nav-bar">
-        <div class="logo">RUMI</div>
+    <div id="custom-cursor"></div>
+
+    <header>
         <nav>
+            <div class="logo">RUMI</div>
             <ul>
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#gallery">Collection</a></li>
-                <li><a href="#impact">Impact</a></li>
+                <li><a href="#material">Materials</a></li>
+                <li><a href="#silhouette">Silhouette</a></li>
+                <li><a href="#footprint">Footprint</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero" class="hero">
+        <section id="hero">
+            <div class="video-overlay"></div>
+            <!-- Placeholder image since we don't have a real .mp4 loop -->
+            <div class="hero-bg" style="background-image: url('https://picsum.photos/seed/minimal/1920/1080');"></div>
             <div class="hero-content">
-                <h1>Footwear for a <br>Circular Future.</h1>
-                <p>Transforming ocean plastic into high-performance design.</p>
-                <div class="sms-module">
-                    <input type="tel" placeholder="Enter phone number" aria-label="Phone number">
-                    <button>Join the Movement</button>
-                </div>
-                <div class="scroll-indicator">
-                    <span>Scroll to explore</span>
-                    <div class="arrow"></div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://picsum.photos/seed/footwear/1200/800" alt="Minimalist Shoe Silhouette" loading="lazy">
+                <h1 class="reveal">RUMI SHOES</h1>
             </div>
         </section>
 
-        <section id="process" class="process">
-            <h2 class="section-title">The Process</h2>
-            <div class="slider-container">
-                <div class="slider-wrapper" id="slider">
-                    <!-- Slides will be injected or handled by JS -->
-                    <div class="slide active">
-                        <img src="https://picsum.photos/seed/ocean/800/600" alt="Collection">
-                        <div class="slide-text">
-                            <h3>01. Collection</h3>
-                            <p>Recovery of post-consumer plastic waste from coastal ecosystems.</p>
-                            <code class="tech-data">MATERIAL: HDPE / PET | SOURCE: COASTAL WATERS</code>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://picsum.photos/seed/recycle/800/600" alt="Processing">
-                        <div class="slide-text">
-                            <h3>02. Processing</h3>
-                            <p>Mechanical shredding and thermal purification into raw pellets.</p>
-                            <code class="tech-data">TEMP: 260°C | PROCESS: POLYMERIZATION</code>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://picsum.photos/seed/textile/800/600" alt="Weaving">
-                        <div class="slide-text">
-                            <h3>03. Weaving</h3>
-                            <p>Precision extrusion into high-tensile recycled yarn.</p>
-                            <code class="tech-data">DENSITY: 450 GSM | WEAVE: RIPSTOP</code>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://picsum.photos/seed/design/800/600" alt="Assembly">
-                        <div class="slide-text">
-                            <h3>04. Assembly</h3>
-                            <p>Ergonomic construction combining recycled uppers and soles.</p>
-                            <code class="tech-data">BOND: WATER-BASED ADHESIVE | WEIGHT: 240g</code>
-                        </div>
+        <section id="material">
+            <h2 class="reveal">The Material</h2>
+            <div class="carousel">
+                <div class="card reveal">
+                    <img src="https://picsum.photos/seed/leather/800/600" alt="Leather">
+                    <div class="card-info">
+                        <h3>Sourced Leather</h3>
+                        <p>Ethically obtained, premium grade.</p>
                     </div>
                 </div>
-                <div class="slider-nav">
-                    <button id="prevBtn">&larr;</button>
-                    <button id="nextBtn">&rarr;</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="gallery">
-            <h2 class="section-title">Collection</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/style1/800/600" alt="Product 1" loading="lazy">
-                    <div class="card-overlay">
-                        <button class="details-btn">View Details</button>
+                <div class="card reveal">
+                    <img src="https://picsum.photos/seed/cotton/800/600" alt="Cotton">
+                    <div class="card-info">
+                        <h3>Organic Cotton</h3>
+                        <p>100% organic, breathable weave.</p>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/style2/800/600" alt="Product 2" loading="lazy">
-                    <div class="card-overlay">
-                        <button class="details-btn">View Details</button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="https://picsum.photos/seed/style3/800/600" alt="Product 3" loading="lazy">
-                    <div class="card-overlay">
-                        <button class="details-btn">View Details</button>
+                <div class="card reveal">
+                    <img src="https://picsum.photos/seed/rubber/800/600" alt="Rubber">
+                    <div class="card-info">
+                        <h3>Natural Rubber</h3>
+                        <p>Sustainable harvesting, maximum grip.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="impact" class="impact">
-            <div class="impact-container">
-                <div class="impact-item">
-                    <div class="counter" data-target="150000">0</div>
-                    <p>Bottles Removed</p>
+        <section id="silhouette">
+            <h2 class="reveal">The Silhouette</h2>
+            <div class="gallery">
+                <div class="gallery-item reveal"><img src="https://picsum.photos/seed/shoe1/800/600" alt="Shoe 1"></div>
+                <div class="gallery-item reveal"><img src="https://picsum.photos/seed/shoe2/800/600" alt="Shoe 2"></div>
+                <div class="gallery-item reveal"><img src="https://picsum.photos/seed/shoe3/800/600" alt="Shoe 3"></div>
+                <div class="gallery-item reveal"><img src="https://picsum.photos/seed/shoe4/800/600" alt="Shoe 4"></div>
+            </div>
+        </section>
+
+        <section id="footprint">
+            <div class="footprint-container">
+                <div class="footprint-text reveal">
+                    <h2>The Footprint</h2>
+                    <p>Our commitment to the planet is measured in every step. We aim for a net-zero carbon footprint by 2030.</p>
                 </div>
-                <div class="impact-item">
-                    <div class="counter" data-target="12000">0</div>
-                    <p>Kgs of Plastic</p>
-                </div>
-                <div class="impact-item">
-                    <div class="counter" data-target="4500">0</div>
-                    <p>Ocean Acres Cleaned</p>
+                <div class="footprint-viz reveal">
+                    <div class="viz-item">
+                        <span>Carbon Offset</span>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="viz-item">
+                        <span>Water Recycled</span>
+                        <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                    </div>
+                    <div class="viz-item">
+                        <span>Waste Reduced</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <img src="https://picsum.photos/seed/earth/800/600" alt="Earth" class="viz-img">
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">RUMI</div>
-            <p>&copy; 2026 Rumi Shoes. Technical Transparency. Eco-Modernist Design.</p>
+        <div class="footer-content reveal">
+            <h3>Join the Waitlist</h3>
+            <form class="signup-form">
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">SUBMIT</button>
+            </form>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
