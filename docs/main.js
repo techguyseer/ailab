@@ -1,56 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sourcingData = {
-        'upper': {
-            origin: 'Organic Cotton',
-            region: 'Sourced from GOTS certified farms in India',
-            impact: 'Reduced water consumption by 80% compared to conventional cotton.'
-        },
-        'laces': {
-            origin: 'Recycled PET',
-            region: 'Recovered ocean plastic from South East Asia',
-            impact: 'Prevents 12 plastic bottles from entering the ocean per pair.'
-        },
-        'sole': {
-            origin: 'Natural Rubber & Algae Bloom',
-            region: 'Sustainably harvested from Brazil',
-            impact: 'Carbon-negative footprint through algae sequestration.'
-        }
+    // 1. Process Slider Logic
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        
+        if (index >= slides.length) currentSlide = 0;
+        else if (index < 0) currentSlide = slides.length - 1;
+        else currentSlide = index;
+        
+        slides[currentSlide].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+
+    // 2. Impact Counter Logic
+    const counters = document.querySelectorAll('.counter');
+    
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / 100; // 100 ticks
+        
+        let count = 0;
+        const updateCount = () => {
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count).toLocaleString();
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        };
+        updateCount();
     };
 
-    const hotspots = document.querySelectorAll('.hotspot');
-    const infoPanel = document.getElementById('info-panel');
+    // 3. Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.5
+    };
 
-    hotspots.forEach(spot => {
-        spot.addEventListener('click', () => {
-            // Update active state
-            hotspots.forEach(s => s.classList.remove('active'));
-            spot.classList.add('active');
-
-            const part = spot.getAttribute('data-part');
-            const data = sourcingData[part];
-
-            // Update panel content with a smooth transition
-            infoPanel.style.opacity = '0';
-            
-            setTimeout(() => {
-                infoPanel.innerHTML = `
-                    <h3 style="text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">${part}</h3>
-                    <p><strong>Sourcing:</strong> ${data.origin}</p>
-                    <p><strong>Region:</strong> ${data.region}</p>
-                    <p style="margin-top: 15px; color: #6B6B6B; font-size: 0.9rem;">${data.impact}</p>
-                `;
-                infoPanel.style.opacity = '1';
-            }, 300);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('counter')) {
+                    animateCounter(entry.target);
+                }
+                // Add other scroll animations here
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
         });
-    });
+    }, observerOptions);
 
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    counters.forEach(counter => {
+        counter.style.transition = 'all 0.6s ease-out';
+        observer.observe(counter);
     });
 });

@@ -3,78 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Shoes | Modern Brutalist Experience</title>
+    <title>Rumi Shoes | Circular Footwear</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="global-wrapper">
-        <!-- Section 1: Hero -->
-        <section id="hero" class="section hero">
-            <div class="hero-bg">
-                <img src="https://picsum.photos/seed/hero/1920/1080" alt="Hero Background" loading="eager">
+    <header class="nav-bar">
+        <div class="logo">RUMI</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#gallery">Collection</a></li>
+                <li><a href="#impact">Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Footwear for a <br>Circular Future.</h1>
+                <p>Transforming ocean plastic into high-performance design.</p>
+                <div class="sms-module">
+                    <input type="tel" placeholder="Enter phone number" aria-label="Phone number">
+                    <button>Join the Movement</button>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="arrow"></div>
+                </div>
             </div>
-            <div class="hero-overlay">
-                <h1 class="display-heading">MIRA SHOES<br>STEP INTO RAW</h1>
-                <a href="#shop" class="cta-button">SHOP THE DROP</a>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/footwear/1200/800" alt="Minimalist Shoe Silhouette" loading="lazy">
             </div>
         </section>
 
-        <hr class="heavy-rule">
+        <section id="process" class="process">
+            <h2 class="section-title">The Process</h2>
+            <div class="slider-container">
+                <div class="slider-wrapper" id="slider">
+                    <!-- Slides will be injected or handled by JS -->
+                    <div class="slide active">
+                        <img src="https://picsum.photos/seed/ocean/800/600" alt="Collection">
+                        <div class="slide-text">
+                            <h3>01. Collection</h3>
+                            <p>Recovery of post-consumer plastic waste from coastal ecosystems.</p>
+                            <code class="tech-data">MATERIAL: HDPE / PET | SOURCE: COASTAL WATERS</code>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/seed/recycle/800/600" alt="Processing">
+                        <div class="slide-text">
+                            <h3>02. Processing</h3>
+                            <p>Mechanical shredding and thermal purification into raw pellets.</p>
+                            <code class="tech-data">TEMP: 260°C | PROCESS: POLYMERIZATION</code>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/seed/textile/800/600" alt="Weaving">
+                        <div class="slide-text">
+                            <h3>03. Weaving</h3>
+                            <p>Precision extrusion into high-tensile recycled yarn.</p>
+                            <code class="tech-data">DENSITY: 450 GSM | WEAVE: RIPSTOP</code>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/seed/design/800/600" alt="Assembly">
+                        <div class="slide-text">
+                            <h3>04. Assembly</h3>
+                            <p>Ergonomic construction combining recycled uppers and soles.</p>
+                            <code class="tech-data">BOND: WATER-BASED ADHESIVE | WEIGHT: 240g</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button id="prevBtn">&larr;</button>
+                    <button id="nextBtn">&rarr;</button>
+                </div>
+            </div>
+        </section>
 
-        <!-- Section 2: Shop the Drop -->
-        <section id="shop" class="section shop">
-            <h2 class="display-heading section-title">SHOP THE DROP</h2>
+        <section id="gallery" class="gallery">
+            <h2 class="section-title">Collection</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://picsum.photos/seed/sneaker1/800/600" alt="Sneaker 1" loading="lazy">
-                    <div class="product-info">
-                        <h3>SNEAKER 01</h3>
-                        <p>$199.00</p>
+                    <img src="https://picsum.photos/seed/style1/800/600" alt="Product 1" loading="lazy">
+                    <div class="card-overlay">
+                        <button class="details-btn">View Details</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="https://picsum.photos/seed/sneaker2/800/600" alt="Sneaker 2" loading="lazy">
-                    <div class="product-info">
-                        <h3>SNEAKER 02</h3>
-                        <p>$249.00</p>
+                    <img src="https://picsum.photos/seed/style2/800/600" alt="Product 2" loading="lazy">
+                    <div class="card-overlay">
+                        <button class="details-btn">View Details</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="https://picsum.photos/seed/sneaker3/800/600" alt="Sneaker 3" loading="lazy">
-                    <div class="product-info">
-                        <h3>SNEAKER 03</h3>
-                        <p>$219.00</p>
+                    <img src="https://picsum.photos/seed/style3/800/600" alt="Product 3" loading="lazy">
+                    <div class="card-overlay">
+                        <button class="details-btn">View Details</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <hr class="heavy-rule">
-
-        <!-- Section 3: Street Proof -->
-        <section id="street" class="section street">
-            <h2 class="display-heading section-title">STREET PROOF</h2>
-            <div class="film-strip">
-                <img src="https://picsum.photos/seed/urban/800/600" alt="UGC 1" loading="lazy">
-                <img src="https://picsum.photos/seed/street/800/600" alt="UGC 2" loading="lazy">
-                <img src="https://picsum.photos/seed/city/800/600" alt="UGC 3" loading="lazy">
-                <img src="https://picsum.photos/seed/lifestyle/800/600" alt="UGC 4" loading="lazy">
+        <section id="impact" class="impact">
+            <div class="impact-container">
+                <div class="impact-item">
+                    <div class="counter" data-target="150000">0</div>
+                    <p>Bottles Removed</p>
+                </div>
+                <div class="impact-item">
+                    <div class="counter" data-target="12000">0</div>
+                    <p>Kgs of Plastic</p>
+                </div>
+                <div class="impact-item">
+                    <div class="counter" data-target="4500">0</div>
+                    <p>Ocean Acres Cleaned</p>
+                </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- Section 4: Footer Checkout -->
-    <footer class="checkout-bar">
-        <div class="checkout-container">
-            <div class="price-total">TOTAL: <span id="total-price">$0.00</span></div>
-            <button class="cta-button checkout-btn">CHECKOUT NOW</button>
-            <div class="cart-qty">CART: <span id="cart-count">0</span></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">RUMI</div>
+            <p>&copy; 2026 Rumi Shoes. Technical Transparency. Eco-Modernist Design.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
