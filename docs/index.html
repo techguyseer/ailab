@@ -1,112 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenLongevity | Imperial Wellness Sanctuary</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUMI — Eco-Minimalism Footwear</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header / Fixed Navigation -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" aria-label="RUMI Home">
+        <svg width="84" height="24" viewBox="0 0 84 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="19" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" letter-spacing="4" fill="currentColor">RUMI</text>
+        </svg>
+      </a>
+      <a href="#subscribe" class="btn btn-ghost">Join the Inner Circle</a>
+    </div>
+  </header>
 
-    <header class="main-header">
-        <nav class="nav-container">
-            <div class="logo">ZenLongevity</div>
-            <ul class="nav-links">
-                <li><a href="#benefits" aria-label="Longevity Benefits">Benefits</a></li>
-                <li><a href="#heritage" aria-label="Our Heritage">Heritage</a></li>
-                <li><a href="#ritual-kit" aria-label="Starter Ritual Kit">Ritual Kit</a></li>
-                <li><a href="#caregiver" aria-label="Caregiver Gift Portal">Caregiver Portal</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main>
+    <!-- Section 1: Hero Experience -->
+    <section id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <span class="hero-tagline">Autumn / Winter Edition</span>
+        <h1>Radical Simplicity. Sustainable Footwear.</h1>
+        <p>Balancing clinical modernist precision with the pure softness of organic materials.</p>
+        <a href="#gallery" class="btn btn-primary">Explore Collection</a>
+      </div>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="video-overlay"></div>
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="https://picsum.photos/seed/matcha/1920/1080" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-content">
-                <h1>Imperial Wellness for a Timeless Life</h1>
-                <a href="#ritual-kit" class="cta-button">Begin Your Ritual</a>
+    <!-- Section 2: Radical Sustainability -->
+    <section id="sustainability">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Radical Sustainability</h2>
+          <p>Every element designed with environmental integrity and mindful craft.</p>
+        </div>
+        <div class="sustainability-grid">
+          <!-- Column 1: Materiality -->
+          <article class="sustainability-card reveal">
+            <div class="card-image-wrap">
+              <img src="https://picsum.photos/seed/material/800/600" alt="Sustainable raw materiality" loading="lazy">
             </div>
-        </section>
-
-        <!-- Benefits Grid -->
-        <section id="benefits" class="section benefits">
-            <h2 class="section-title">The Pillars of Longevity</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card reveal">
-                    <img src="https://picsum.photos/seed/mind/400/300" alt="Cognitive Wellness Icon" class="benefit-img">
-                    <h3>Cognitive</h3>
-                    <p>Preserving mental clarity and cognitive resilience through ancestral wisdom and modern precision.</p>
-                </div>
-                <div class="benefit-card reveal">
-                    <img src="https://picsum.photos/seed/body/400/300" alt="Physical Wellness Icon" class="benefit-img">
-                    <h3>Physical</h3>
-                    <p>Enhancing vitality and mobility to ensure every year is lived with strength and grace.</p>
-                </div>
-                <div class="benefit-card reveal">
-                    <img src="https://picsum.photos/seed/soul/400/300" alt="Emotional Wellness Icon" class="benefit-img">
-                    <h3>Emotional</h3>
-                    <p>Cultivating inner peace and emotional equilibrium for a balanced, harmonious existence.</p>
-                </div>
+            <div class="card-content">
+              <div class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <h3>Materiality</h3>
+              <p>100% plant-based organic cottons, natural hevea latex soles, and zero synthetic toxic adhesives.</p>
             </div>
-        </section>
+          </article>
 
-        <!-- Heritage Section -->
-        <section id="heritage" class="section heritage">
-            <div class="heritage-row reveal">
-                <div class="heritage-image">
-                    <img src="https://picsum.photos/seed/heritage/800/600" alt="Imperial Tradition Image">
-                </div>
-                <div class="heritage-text">
-                    <h2>Our Imperial Heritage</h2>
-                    <p>Rooted in the clandestine traditions of the Imperial courts, ZenLongevity brings you artisanal sourcing and time-honored rituals. We believe that longevity is not merely the absence of illness, but the presence of vitality.</p>
-                    <p>Every leaf and extract is hand-selected from sustainable estates, ensuring the purest expression of nature's healing power.</p>
-                </div>
+          <!-- Column 2: Ethics -->
+          <article class="sustainability-card reveal">
+            <div class="card-image-wrap">
+              <img src="https://picsum.photos/seed/ethics/800/600" alt="Ethical craftsmanship" loading="lazy">
             </div>
-        </section>
-
-        <!-- Ritual Kit Section -->
-        <section id="ritual-kit" class="section ritual-kit">
-            <div class="kit-container reveal">
-                <div class="kit-visual">
-                    <img src="https://picsum.photos/seed/bundle/800/600" alt="Starter Ritual Kit Showcase">
-                </div>
-                <div class="kit-details">
-                    <h2>Starter Ritual Kit</h2>
-                    <ul class="kit-list">
-                        <li><span> Ceremonial Grade Matcha</span></li>
-                        <li><span> Hand-carved Bamboo Whisk</span></li>
-                        <li><span> Imperial Porcelain Bowl</span></li>
-                        <li><span> Sourcing Guide & Ritual Manual</span></li>
-                    </ul>
-                    <button class="ritual-button" aria-label="Add Starter Ritual Kit to Ritual">Add to Ritual</button>
-                </div>
+            <div class="card-content">
+              <div class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <h3>Ethics</h3>
+              <p>Hand-stitched in fair-wage artisan cooperatives with transparent global supply chain verification.</p>
             </div>
-        </section>
+          </article>
 
-        <!-- Caregiver Portal -->
-        <section id="caregiver" class="section caregiver">
-            <div class="portal-card reveal">
-                <img src="https://picsum.photos/seed/family/800/600" alt="Family Wellness Image" class="portal-img">
-                <h2>The Gift of Wellness</h2>
-                <p>Honoring the bond between generations. Provide your parents with the sanctuary they deserve through our dedicated Caregiver's Portal.</p>
-                <a href="#" class="portal-link">Explore the Gift Portal</a>
+          <!-- Column 3: Lifecycle -->
+          <article class="sustainability-card reveal">
+            <div class="card-image-wrap">
+              <img src="https://picsum.photos/seed/lifecycle/800/600" alt="Circular lifecycle" loading="lazy">
             </div>
-        </section>
-    </main>
+            <div class="card-content">
+              <div class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                </svg>
+              </div>
+              <h3>Lifecycle</h3>
+              <p>Fully biodegradable architecture and an integrated closed-loop trade-in recycling program.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 ZenLongevity. All rights reserved. Imperial Minimalist Design.</p>
-    </footer>
+    <!-- Section 3: Pre-Order Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Pre-Order Gallery</h2>
+          <p>Limited batch releases crafted with meticulous precision.</p>
+        </div>
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <div class="product-card reveal">
+            <div class="product-image-wrap">
+              <img src="https://picsum.photos/seed/product1/800/600" alt="Rumi Footwear Model A" loading="lazy">
+            </div>
+            <div class="product-details">
+              <div class="product-info">
+                <h3>Model A — Low Trainer</h3>
+                <span class="product-price">$220</span>
+              </div>
+              <p class="product-desc">Alabaster canvas with unbleached organic linen trim.</p>
+              <div class="size-selector-group">
+                <span class="selector-label">Select Size:</span>
+                <div class="size-options">
+                  <button type="button" class="size-btn active" data-size="Small">Small</button>
+                  <button type="button" class="size-btn" data-size="Medium">Medium</button>
+                  <button type="button" class="size-btn" data-size="Large">Large</button>
+                </div>
+              </div>
+              <button class="btn btn-primary reserve-btn" data-product="Model A">Reserve</button>
+            </div>
+          </div>
 
-    <script src="script.js"></script>
+          <!-- Product Card 2 -->
+          <div class="product-card reveal">
+            <div class="product-image-wrap">
+              <img src="https://picsum.photos/seed/product2/800/600" alt="Rumi Footwear Model B" loading="lazy">
+            </div>
+            <div class="product-details">
+              <div class="product-info">
+                <h3>Model B — Mid Boot</h3>
+                <span class="product-price">$260</span>
+              </div>
+              <p class="product-desc">Soft stone structured silhouette with natural cork interior lining.</p>
+              <div class="size-selector-group">
+                <span class="selector-label">Select Size:</span>
+                <div class="size-options">
+                  <button type="button" class="size-btn active" data-size="Small">Small</button>
+                  <button type="button" class="size-btn" data-size="Medium">Medium</button>
+                  <button type="button" class="size-btn" data-size="Large">Large</button>
+                </div>
+              </div>
+              <button class="btn btn-primary reserve-btn" data-product="Model B">Reserve</button>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card reveal">
+            <div class="product-image-wrap">
+              <img src="https://picsum.photos/seed/product3/800/600" alt="Rumi Footwear Model C" loading="lazy">
+            </div>
+            <div class="product-details">
+              <div class="product-info">
+                <h3>Model C — Slip-On Mule</h3>
+                <span class="product-price">$190</span>
+              </div>
+              <p class="product-desc">Muted olive knit upper engineered from recycled organic bamboo fibre.</p>
+              <div class="size-selector-group">
+                <span class="selector-label">Select Size:</span>
+                <div class="size-options">
+                  <button type="button" class="size-btn active" data-size="Small">Small</button>
+                  <button type="button" class="size-btn" data-size="Medium">Medium</button>
+                  <button type="button" class="size-btn" data-size="Large">Large</button>
+                </div>
+              </div>
+              <button class="btn btn-primary reserve-btn" data-product="Model C">Reserve</button>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="product-card reveal">
+            <div class="product-image-wrap">
+              <img src="https://picsum.photos/seed/product4/800/600" alt="Rumi Footwear Model D" loading="lazy">
+            </div>
+            <div class="product-details">
+              <div class="product-info">
+                <h3>Model D — High Runner</h3>
+                <span class="product-price">$280</span>
+              </div>
+              <p class="product-desc">Ultra-lightweight natural latex cushioning with water-resistant bio-coating.</p>
+              <div class="size-selector-group">
+                <span class="selector-label">Select Size:</span>
+                <div class="size-options">
+                  <button type="button" class="size-btn active" data-size="Small">Small</button>
+                  <button type="button" class="size-btn" data-size="Medium">Medium</button>
+                  <button type="button" class="size-btn" data-size="Large">Large</button>
+                </div>
+              </div>
+              <button class="btn btn-primary reserve-btn" data-product="Model D">Reserve</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: Conversion & Socials -->
+  <footer id="subscribe">
+    <div class="container footer-content">
+      <div class="footer-cta reveal">
+        <span class="footer-tag">Join The Movement</span>
+        <h2>Stay in the Circle</h2>
+        <p>Early access releases, sustainable fashion insights, and invitation-only events.</p>
+        
+        <form class="email-form" id="subscribe-form">
+          <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+          <button type="submit" aria-label="Subscribe">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 RUMI Shoes. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#instagram" target="_blank" rel="noopener">Instagram</a>
+          <span class="dot">&middot;</span>
+          <a href="#linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="dot">&middot;</span>
+          <a href="#pinterest" target="_blank" rel="noopener">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

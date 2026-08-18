@@ -1,37 +1,70 @@
+// Vanilla JavaScript for Rumi Shoes Landing Page
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for scroll reveal animations
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                // Once revealed, we can stop observing the element
-                observer.unobserve(entry.target);
-            }
-        });
-    };
+  // 1. Header Shrink & Opacity on Scroll
+  const navbar = document.getElementById('navbar');
+  const handleScroll = () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 
-    const revealObserver = new IntersectionObserver(revealCallback, {
-        root: null, // viewport
-        threshold: 0.1, // trigger when 10% of element is visible
+  // 2. IntersectionObserver for Scroll Reveal
+  const revealElements = document.querySelectorAll('.reveal');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        obs.unobserve(entry.target);
+      }
     });
+  }, observerOptions);
 
-    // Target all elements with the 'reveal' class
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => revealObserver.observe(el));
+  revealElements.forEach(el => observer.observe(el));
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70, // offset for sticky header
-                    behavior: 'smooth'
-                });
-            }
-        });
+  // 3. Size Selector State Management
+  const sizeOptionGroups = document.querySelectorAll('.size-options');
+  sizeOptionGroups.forEach(group => {
+    const buttons = group.querySelectorAll('.size-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
     });
+  });
+
+  // 4. Reserve Button Interaction
+  const reserveButtons = document.querySelectorAll('.reserve-btn');
+  reserveButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.product-card');
+      const productName = card.querySelector('h3').textContent.trim();
+      const selectedSize = card.querySelector('.size-btn.active')?.dataset.size || 'Medium';
+      alert(`Pre-order reservation placed for ${productName} (Size: ${selectedSize}). Thank you!`);
+    });
+  });
+
+  // 5. Newsletter Form Submission
+  const subscribeForm = document.getElementById('subscribe-form');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = subscribeForm.querySelector('input[type="email"]');
+      if (input && input.value) {
+        alert(`Thank you for joining the Inner Circle, ${input.value}!`);
+        input.value = '';
+      }
+    });
+  }
 });
